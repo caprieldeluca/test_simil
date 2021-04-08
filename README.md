@@ -98,6 +98,11 @@ It outputs:
     
     s_quat :
      [ 2.25 -1.25 -3.75 -0.25]
+
+    t_vector :
+     [[3.]
+     [7.]
+     [5.]]
     
     target_computed_points :
      [[3.  7.  5. ]
