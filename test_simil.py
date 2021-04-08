@@ -82,6 +82,7 @@ print('\ns_quat :\n', s_quat)
 
 # Eq 28, 26
 t_vector = np.array(simil._get_t_vector(r_quat, s_quat)).reshape(3,1)
+print('\nt_vector :\n', t_vector)
 
 # Outputs
 m = lambda_i
