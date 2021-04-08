@@ -16,7 +16,7 @@ source_coords = source_points_array.T
 target_coords = target_points_array.T
 n = source_coords.shape[1]
 alpha_0 = np.ones(n)
-lambda_0=1.0
+lambda_0 = 1.0
 scale = True
 
 # Eq 29
