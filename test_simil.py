@@ -16,7 +16,7 @@ source_coords = source_points_array.T
 target_coords = target_points_array.T
 n = source_coords.shape[1]
 alpha_0 = np.ones(n)
-lambda_0 = 1.0
+lambda_0=1.0
 scale = True
 
 # Eq 29
@@ -73,8 +73,16 @@ print('\nlambda_i : ', lambda_i)
 print('\ni : ', i)
 
 # Eq 25
-r_matrix = simil._get_r_matrix(r_quat)
+## Inermediate results
+r_w_matrix = simil._get_w_matrix([r_quat])[0]
+print('\nr_w_matrix :\n', r_w_matrix)
+r_q_matrix = simil._get_q_matrix([r_quat])[0]
+print('\nr_q_matrix :\n', r_q_matrix)
+r_matrix = (r_w_matrix.T @ r_q_matrix)[:3,:3]
 print('\nr_matrix :\n', r_matrix)
+## From private function
+#r_matrix = simil._get_r_matrix(r_quat)
+#print('\nr_matrix :\n', r_matrix)
 
 # Eq 58
 s_quat = simil._get_s_quat(c_scalar, blc_matrix, r_quat)
