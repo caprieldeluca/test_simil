@@ -30,7 +30,7 @@ b_scalar = simil._get_scalar(alpha_0, source_q_coords)
 print('\nb_scalar : ', b_scalar)
 
 # Eq 41
-c_scalar = np.einsum('i->', alpha_0)
+c_scalar = simil._get_scalar(alpha_0)
 print('\nc_scalar : ', c_scalar)
 
 # Eq 17
